@@ -1,6 +1,10 @@
 import { Stack } from "expo-router";
+import { CurriculoProvider } from "../lib/CurriculoContext";
 
-export default function RootLayout(){
-    return <Stack screenOptions={{ headerShown: false}} />
-
+export default function RootLayout() {
+  return (
+    <CurriculoProvider>
+      <Stack screenOptions={{ headerShown: false }} />
+    </CurriculoProvider>
+  );
 }
